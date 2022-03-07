@@ -15,10 +15,10 @@ export default function Footer() {
                 <option name="" id="">English, USA</option>
               </select>
               <div className="footer__social--list">
-                <a href=""><BsTwitter /></a>
-                <a href=""><BsInstagram /></a>
-                <a href=""><BsFacebook /></a>
-                <a href=""><BsYoutube /></a>
+                <a className='footer__social' href=""><BsTwitter /></a>
+                <a className='footer__social' href=""><BsInstagram /></a>
+                <a className='footer__social' href=""><BsFacebook /></a>
+                <a className='footer__social' href=""><BsYoutube /></a>
               </div>
             </div>
             <div className="footer__right-side">

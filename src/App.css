@@ -173,8 +173,6 @@ InfoGeneral
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  margin: 0 auto;
   gap: 80px;
 }
 
@@ -287,11 +285,6 @@ Footer
   padding-bottom: 16px;
 }
 
-.footer__select > option {
-  background-color: #23272a;
-}
-
-
 .footer__list-title {
   color: var(--brand);
   font-size: 12px;
@@ -337,4 +330,17 @@ Footer
 
 .btn__signup--purple:hover {
   background-color: hsl(235,calc(var(--saturation-factor, 1)*86.1%),71.8%);
+}
+
+.footer__social--list {
+  margin-top:16px
+}
+
+.footer__social {
+  color: white;
+  padding: 0 6px;
+}
+
+.footer__select > option {
+
 }
