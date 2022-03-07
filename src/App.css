@@ -1,38 +1,340 @@
+/* TODO: ADD BACKGROUND IMAGE FOR IMAGINE A PLACE SECTION */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+:root {
+  --brand: #5865f2;
+  --not-black: #2c2f33;
+}
+
 .App {
-  text-align: center;
+  background-color: #404eed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.no-cursor {
+  cursor: not-allowed;
+}
+
+.row {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 40px 80px;
+}
+
+/* 
+
+NAV
+
+*/
+
+.nav-logo {
+  height: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.nav__link {
+  color: white;
+  font-weight: 700;
+  margin-right: 28px;
+}
+
+.nav__link:last-child {
+  margin-right: 0px;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+.btn--login {
+  color: var(--not-black);
+  background-color: white;
+  border-radius: 20px;
+  font-size:12px;
+  font-weight: 700;
+  padding: 10px 15px;
+  transition: 300ms ease all;
+}
+
+.btn--login:hover {
+  color: var(--brand);
+  box-shadow: 0 8px 15px rgba(0,0,0,.2)
+}
+
+/* 
+
+Download section
+
+*/
+
+.download--wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-bottom: 140px;
+}
+
+.download__title {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 56px;
+}
+
+.download__para {
+  color: white;
+  max-width: 630px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.btn__generic {
+  padding: 12px 16px;
+  border-radius: 30px;
+  margin-right: 16px;
+  transition: 300ms ease all;
+}
+
+.btn--white {
+  background-color: white;
+  color: black;
+}
+
+.btn--black {
+  background-color: var(--not-black);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn__generic:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn--black:hover {
+  background-color: #36393f;
+}
+
+.btn--white:hover {
+  color: var(--brand);
+}
+
+.btn--download {
+  display: flex;
+  align-items: center;
+}
+
+.btn--wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.download__btn-title {
+  padding-left: 4px;
+}
+
+
+/* 
+
+InfoGeneral 
+
+*/
+
+.InfoGeneral--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+.InfoGeneral__info--wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.InfoGeneral__img{
+  width: 50%;
+}
+
+.InfoGeneral__title {
+  color: var(--not-black);
+  padding-bottom: 16px;
+  max-width: 220px;
+  
+}
+
+.InfoGeneral__para {
+  font-size: 0.9rem;
+  color: var(--not-black);
+  max-width: 220px;
+}
+
+/* 
+
+Reliable Tech
+
+*/
+
+.reliable-tech__container {
+  background-color: #f6f6f6;
+  padding: 80px 0;
+}
+
+.reliable-tech--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reliable-tech__title {
+  color: var(--not-black);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 32px;
+}
+
+.reliable-tech__para {
+  color: var(--not-black);
+  font-size: 0.9rem;
+  max-width: 700px;
+  text-align: center;
+}
+
+.reliable-tech__sub-title {
+  padding: 40px 0;
+}
+
+.btn--purple {
+  background-color: var(--brand);
+  color: white;
+  margin-right: 0;
+}
+
+
+/* 
+
+Footer
+
+*/
+.footer--row {
+  max-width: 1000px;
+}
+
+
+.container--Footer {
+  background-color: #23272a;
+}
+
+.footer__upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__right-side {
+  display: flex;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  height: 30px;
+}
+
+.footer__lower {
+  display: flex;justify-content: space-between;
+}
+
+.left-side__title {
+  max-width: 150px;
+  color: var(--brand);
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 0.8;
+  padding-bottom: 16px;
+}
+
+.footer__select > option {
+  background-color: #23272a;
+}
+
+
+.footer__list-title {
+  color: var(--brand);
+  font-size: 12px;
+  padding-bottom: 12px;
+}
+
+.list__link {
+  color: white;
+  font-size: 10px;
+  line-height: 24px;
+}
+
+.list__link:hover {
+  text-decoration: underline;
+}
+
+.footer__list {
+  padding-right: 80px;
+}
+
+.footer__list:last-child {
+  padding-right: 0px;
+}
+
+.footer__upper {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--brand);
+}
+
+.footer__lower {
+  padding-top: 32px;
+}
+
+.btn__signup--purple {
+  background-color: var(--brand);
+  color: white;
+  border-radius: 20px;
+  font-size:12px;
+  font-weight: 700;
+  padding: 10px 15px;
+  transition: 300ms ease all;
+}
+
+.btn__signup--purple:hover {
+  background-color: hsl(235,calc(var(--saturation-factor, 1)*86.1%),71.8%);
 }
