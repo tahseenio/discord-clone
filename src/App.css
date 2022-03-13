@@ -1,5 +1,6 @@
 /* TODO: ADD BACKGROUND IMAGE FOR IMAGINE A PLACE SECTION 
-  TODO: Add animations for pictures
+  TODO: Add animations for pictures on page 1
+  TODO: change favico of discord to one with correct shade and make title text change on page change
 */
 
 
@@ -16,6 +17,8 @@
 :root {
   --brand: #5865f2;
   --not-black: #2c2f33;
+  --not-quite-black: #23272a;
+  --off-white: #f6f6f6;
 }
 
 .App {
@@ -344,6 +347,166 @@ Footer
   padding: 0 6px;
 }
 
-.footer__select > option {
+/* 
 
+Device
+
+*/
+
+.device--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--off-white);
+  padding: 56px;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 600px;
+  width: 50%;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+}
+
+.device__title {
+  color: var(--not-quite-black);
+  line-height: 0.9;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.device__img {
+  margin-top: 64px;
+}
+
+.device__btn {
+  background-color: var(--not-quite-black);
+  color: white;
+  border-radius: 28px;
+  padding: 16px 32px;
+  font-size: 20px;
+  transition: 300ms;
+  margin-top: 16px;
+}
+
+.device__btn:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,.2);
+  background-color: #36393f;
+}
+
+/* 
+
+Linux button
+
+*/
+
+.linux-dropdown {
+  position: relative;
+}
+
+.btn--with-arrow {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.linux-dropdown__list {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+  margin-top: 8px;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.linux-dropdown__list.active {
+  opacity: 1;
+}
+
+.linux__link {
+  color: var(--not-quite-black);
+  padding: 4px 8px;
+  padding-right: 90px;
+  line-height: 1.625;
+  font-size: 20px;
+}
+
+.linux__link:hover {
+  background-color: var(--off-white);
+  border-radius: 4px;
+  text-decoration: underline;
+  color: var(--brand);
+}
+
+
+/* 
+
+Feeling Experimental?
+
+*/
+
+.experimental--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--off-white);
+  padding: 56px;
+  overflow: hidden;
+  height: 300px;
+  width: 50%;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+}
+
+.experimental__title {
+  color: var(--not-quite-black);
+  line-height: 0.9;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.experimental__para {
+  line-height: 1.625;
+  font-size: 20px;
+  color: var(--not-quite-black);
+  margin: 16px 0;
+  text-align: center;
+}
+
+.experimental-dropdown__list {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+  margin-top: 8px;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.experimental-dropdown__list.active {
+  opacity: 1;
+}
+
+.experimental__link {
+  color: var(--not-quite-black);
+  padding: 4px 8px;
+  padding-right: 180px;
+  line-height: 1.625;
+  font-size: 20px;
+}
+
+.experimental__link:hover {
+  background-color: var(--off-white);
+  border-radius: 4px;
+  text-decoration: underline;
+  color: var(--brand);
 }

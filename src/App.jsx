@@ -9,6 +9,7 @@ import leftAlien from './assets/left-alien.svg'
 import study from './assets/study-group.svg'
 import coach from './assets/coach.svg'
 import hangingOut from './assets/hanging-out.svg'
+import Devices from './components/Devices';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
       />
       <InfoGeneral 
         title={'Where hanging out is easy'} 
-        para={'Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.'} 
+        para={`Grab a seat in a voice channel when you're free. Friends in your server can see you're around and instantly pop in to talk without having to call.`} 
         image={hangingOut}
         bgColor={'#f6f6f6'}
         row={'row'}
@@ -38,6 +39,7 @@ function App() {
         row={'row-reverse'}
       />
       <ReliableTech />
+      <Devices />
       <Footer />
     </div>
   );
