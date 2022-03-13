@@ -13,11 +13,11 @@ export default function Devices() {
     <div className="container" style={{backgroundColor: 'white'}}>
       <div className="row">
         <div className="devices__wrapper">
-          <Device name={'iOS'} img={iPhone} />
-          <Device name={'Android'} img={Android} />
-          <Device name={'Mac'} img={Mac} />
-          <Device name={'Linux'} img={Linux} />
-          <Experimental />
+          <Device name={'iOS'} img={iPhone} grid={"device__grid-1"}/>
+          <Device name={'Android'} img={Android} grid={"device__grid-2"}/>
+          <Device name={'Mac'} img={Mac} grid={"device__grid-3"}/>
+          <Device name={'Linux'} img={Linux} grid={"device__grid-4"}/>
+          <Experimental className="device__grid-5" grid={"device__grid-5"}/>
         </div>
       </div>
     </div>

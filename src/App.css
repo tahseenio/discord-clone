@@ -1,6 +1,8 @@
 /* TODO: ADD BACKGROUND IMAGE FOR IMAGINE A PLACE SECTION 
   TODO: Add animations for pictures on page 1
   TODO: change favico of discord to one with correct shade and make title text change on page change
+  TODO: change footer links font size to correct size
+  TODO: implement 
 */
 
 
@@ -363,7 +365,7 @@ Device
   border-radius: 16px;
   overflow: hidden;
   height: 600px;
-  width: 50%;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  width: 100%;
 }
 
 .device__title {
@@ -413,20 +415,18 @@ Linux button
 
 .linux-dropdown__list {
   position: absolute;
-
-  display: flex;
+  display: none;
   flex-direction: column;
 
   background-color: white;
   padding: 16px;
   border-radius: 16px;
   margin-top: 8px;
-  opacity: 0;
-  transition: opacity 200ms ease;
+  transition: 200ms ease;
 }
 
 .linux-dropdown__list.active {
-  opacity: 1;
+  display: flex;
 }
 
 .linux__link {
@@ -460,10 +460,11 @@ Feeling Experimental?
   padding: 56px;
   overflow: hidden;
   height: 300px;
-  width: 50%;   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  width: 100%;
 }
 
 .experimental__title {
+  text-align: center;
   color: var(--not-quite-black);
   line-height: 0.9;
   font-weight: 600;
@@ -480,20 +481,19 @@ Feeling Experimental?
 
 .experimental-dropdown__list {
   position: absolute;
-
-  display: flex;
+  display: none;
   flex-direction: column;
 
   background-color: white;
   padding: 16px;
   border-radius: 16px;
   margin-top: 8px;
-  opacity: 0;
-  transition: opacity 200ms ease;
+  
+  transition: 200ms ease;
 }
 
 .experimental-dropdown__list.active {
-  opacity: 1;
+  display: flex;
 }
 
 .experimental__link {
@@ -509,4 +509,43 @@ Feeling Experimental?
   border-radius: 4px;
   text-decoration: underline;
   color: var(--brand);
+}
+
+
+/* 
+
+All Devices wrapper
+
+*/
+
+.devices__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.device__grid-1 {
+  grid-row: 1 / 4;  
+}
+
+.device__grid-2 {
+  grid-column-start: 2 ;
+  grid-row: 2 / 5;
+}
+
+.device__grid-3 {
+  grid-column-start: 2;
+  grid-row: 5 / 8;
+  
+}
+
+.device__grid-4 {
+  grid-column-start: 1;
+  grid-row: 4 / 7;
+}
+
+.device__grid-5 {
+  grid-column-start: 1;
+  grid-row-start: 7;
 }
