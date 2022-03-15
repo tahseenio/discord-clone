@@ -1,8 +1,11 @@
-/* TODO: ADD BACKGROUND IMAGE FOR IMAGINE A PLACE SECTION 
-  TODO: Add animations for pictures on page 1
+/* 
+  TODO: ADD absolute images to page 1  
+  TODO: ADD absolute images to page 2  
+  TODO: ADD BACKGROUND IMAGE FOR IMAGINE A PLACE SECTION 
   TODO: change favico of discord to one with correct shade and make title text change on page change
   TODO: change footer links font size to correct size
-  implement AOS animations
+  TODO: implement AOS animations
+  TODO: make pages actually responsive
   TODO: make nav transparent so background color is easier to set
 */
 
@@ -185,6 +188,15 @@ InfoGeneral
   gap: 80px;
 }
 
+.InfoGeneral--study,
+.InfoGeneral--coach {
+  flex-direction: row-reverse;
+}
+
+.InfoGeneral--hangingOut {
+  flex-direction: row;
+}
+
 .InfoGeneral__info--wrapper {
   display: flex;
   flex-direction: column;
@@ -198,6 +210,7 @@ InfoGeneral
   color: var(--not-black);
   padding-bottom: 16px;
   max-width: 220px;
+  text-align: center;
   
 }
 
@@ -205,6 +218,7 @@ InfoGeneral
   font-size: 0.9rem;
   color: var(--not-black);
   max-width: 220px;
+  text-align: center;
 }
 
 /* 
@@ -215,7 +229,7 @@ Reliable Tech
 
 .reliable-tech__container {
   background-color: #f6f6f6;
-  padding: 80px 0;
+  padding: 80px 80px;
 }
 
 .reliable-tech--wrapper {
@@ -229,6 +243,7 @@ Reliable Tech
   text-transform: uppercase;
   font-weight: 700;
   padding-bottom: 32px;
+  text-align: center;
 }
 
 .reliable-tech__para {
@@ -270,11 +285,14 @@ Footer
 
 .footer__right-side {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 
 .footer__list {
   display: flex;
   flex-direction: column;
+  width: calc(100% / 4);
 }
 
 .footer-logo {
@@ -286,24 +304,25 @@ Footer
 }
 
 .left-side__title {
-  max-width: 150px;
+  max-width: 200px;
   color: var(--brand);
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 0.8;
   padding-bottom: 16px;
+  margin-right: 60px;
 }
 
 .footer__list-title {
   color: var(--brand);
-  font-size: 12px;
+  font-size: 16px;
   padding-bottom: 12px;
 }
 
 .list__link {
   color: white;
-  font-size: 10px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 30px; /* changes spacing between links */
 }
 
 .list__link:hover {
@@ -342,12 +361,13 @@ Footer
 }
 
 .footer__social--list {
-  margin-top:16px
+  margin-top:30px;
 }
 
 .footer__social {
+  font-size: 1.3em;
   color: white;
-  padding: 0 6px;
+  padding: 0 8px;
 }
 
 /* 
@@ -554,4 +574,32 @@ All Devices wrapper
 .device__grid-5 {
   grid-column-start: 1;
   grid-row-start: 5 / span 2;
+}
+
+
+
+@media (max-width: 768px) {
+  .InfoGeneral--wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .InfoGeneral__img {
+    width: 100%;
+  }
+  .InfoGeneral__title {
+    max-width: none;
+  }
+
+  .InfoGeneral__para {
+    max-width: none;
+  }
+
+  .footer__list {
+    width: calc(100% / 2);
+    padding-right: 0px;
+  }
+
+  .footer__list-title {
+    margin-top: 8px;
+  }
 }

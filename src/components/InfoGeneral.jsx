@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function InfoGeneral({ title, para, image, bgColor, row }) {
+export default function InfoGeneral({ title, para, image, bgColor, identifier }) {
   return (
       <div className="container" style={{backgroundColor: bgColor}}>
         <div className='row'>
-          <div className="InfoGeneral--wrapper" style={{flexDirection: row}}>
+          <div className={`InfoGeneral--wrapper InfoGeneral--${identifier}`}>
             <div className="InfoGeneral__info--wrapper">
               <h1 className='InfoGeneral__title'>
                 {title}

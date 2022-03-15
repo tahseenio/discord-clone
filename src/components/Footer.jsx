@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { BsTwitter, BsInstagram, BsYoutube, BsFacebook } from 'react-icons/bs';
 import Logo from '../assets/discord-logo.svg'
@@ -58,9 +59,9 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer__lower">
-            <a href="#">
-              <img className='footer-logo' src={Logo} alt="" />
-            </a>
+            <Link to='discord-clone'>
+                <img className='footer-logo' src={Logo} alt="" />
+            </Link>
             <a className="btn__signup--purple no-cursor" href="#">Sign up</a>
           </div>
         </footer>
