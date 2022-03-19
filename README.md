@@ -1,4 +1,4 @@
-# <img src="https://img.icons8.com/color/48/000000/discord-logo.png"/> Discord Clone
+# <img width="80%" src="https://img.icons8.com/color/48/000000/discord-logo.png"/> Discord Clone
 
 <img src="https://img.shields.io/github/deployments/tahseenio/discord-clone/github-pages" alt="GitHub Badge"> <img src="https://img.shields.io/github/repo-size/tahseenio/discord-clone">
 
