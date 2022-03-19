@@ -3,7 +3,7 @@
 <img src="https://img.shields.io/github/deployments/tahseenio/discord-clone/github-pages" alt="GitHub Badge"> <img src="https://img.shields.io/github/repo-size/tahseenio/discord-clone">
 
 ### Description
-- A Discord Clone created using HTML, CSS, JS and React
+- A Discord Clone created using HTML, CSS, JS and React (Note: only some pages have been cloned)
 - CSS Flexbox and BEM styling was used
 - Responsive on all devices
 - The website can be viewed [here](https://tahseenio.github.io/discord-clone/)
