@@ -4,7 +4,7 @@
 
 ### Description
 - A Discord Clone created using HTML, CSS, JS and React (Note: only some pages have been cloned)
-- CSS Flexbox and BEM styling was used
+- CSS Flexbox, Grid and BEM convention used
 - Responsive on all devices
 - The website can be viewed [here](https://tahseenio.github.io/discord-clone/)
 
