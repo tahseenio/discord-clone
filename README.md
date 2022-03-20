@@ -10,7 +10,7 @@
 
 ## Screenshots
 
-<img src="">
+<img src="https://i.imgur.com/fopIvH5.png">
 
 ## Installation and Usage
 
