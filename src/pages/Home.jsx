@@ -3,7 +3,6 @@ import Download from '../components/Download';
 import InfoGeneral from '../components/InfoGeneral';
 import ReliableTech from '../components/ReliableTech';
 
-import leftAlien from '../assets/left-alien.svg'
 import study from '../assets/study-group.svg'
 import coach from '../assets/coach.svg'
 import hangingOut from '../assets/hanging-out.svg'
@@ -11,6 +10,7 @@ import hangingOut from '../assets/hanging-out.svg'
 export default function Home() {
   return (
     <>
+      {/* <img src={clouds} alt="" /> */}
       <Download />
       <InfoGeneral
         identifier={'study'}
@@ -28,7 +28,7 @@ export default function Home() {
         row={'row'}
       />
       <InfoGeneral
-      identifier={'coach'}
+        identifier={'coach'}
         title={'From few to a fandom'}
         para={'Get any community running with moderation tools and custom member access. Give members special powers, set up private channels, and more.'}
         image={coach}

@@ -7,8 +7,8 @@
   TODO: implement AOS animations
   TODO: make pages actually responsive
   TODO: make nav transparent so background color is easier to set
+  TODO: make responsive
 */
-
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 
@@ -18,7 +18,6 @@
   box-sizing: border-box;
   font-family: 'PT Sans', sans-serif;
 }
-
 
 :root {
   --brand: #5865f2;
@@ -51,6 +50,10 @@ a {
 
 .container {
   padding: 40px 80px;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* 
@@ -92,7 +95,7 @@ nav {
   color: var(--not-black);
   background-color: white;
   border-radius: 20px;
-  font-size:12px;
+  font-size: 12px;
   font-weight: 700;
   padding: 10px 15px;
   transition: 300ms ease all;
@@ -100,7 +103,7 @@ nav {
 
 .btn--login:hover {
   color: var(--brand);
-  box-shadow: 0 8px 15px rgba(0,0,0,.2)
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* 
@@ -109,12 +112,32 @@ Download section
 
 */
 
-.download--wrapper {
+.download__container {
   position: relative;
+}
+
+.download--wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 140px;
+  background-image: url('../src/assets/clouds.svg');
+  background-repeat: no-repeat;
+}
+
+.download__left-alien,
+.download__right-alien {
+  position: absolute;
+  height: 300px;
+  bottom: 0;
+}
+
+.download__left-alien {
+  right: 600px;
+}
+
+.download__right-alien {
+  left: 600px;
 }
 
 .download__title {
@@ -122,6 +145,7 @@ Download section
   margin-bottom: 40px;
   color: white;
   font-size: 56px;
+  z-index: 1;
 }
 
 .download__para {
@@ -129,6 +153,7 @@ Download section
   max-width: 630px;
   text-align: center;
   margin-bottom: 32px;
+  z-index: 1;
 }
 
 .btn__generic {
@@ -149,7 +174,7 @@ Download section
 }
 
 .btn__generic:hover {
-  box-shadow: 0 8px 15px rgba(0,0,0,.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn--black:hover {
@@ -168,12 +193,12 @@ Download section
 .btn--wrapper {
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .download__btn-title {
   padding-left: 4px;
 }
-
 
 /* 
 
@@ -202,7 +227,7 @@ InfoGeneral
   flex-direction: column;
 }
 
-.InfoGeneral__img{
+.InfoGeneral__img {
   width: 50%;
 }
 
@@ -211,7 +236,6 @@ InfoGeneral
   padding-bottom: 16px;
   max-width: 220px;
   text-align: center;
-  
 }
 
 .InfoGeneral__para {
@@ -263,7 +287,6 @@ Reliable Tech
   margin-right: 0;
 }
 
-
 /* 
 
 Footer
@@ -272,7 +295,6 @@ Footer
 .footer--row {
   max-width: 1000px;
 }
-
 
 .container--Footer {
   background-color: #23272a;
@@ -300,7 +322,8 @@ Footer
 }
 
 .footer__lower {
-  display: flex;justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .left-side__title {
@@ -350,18 +373,18 @@ Footer
   background-color: var(--brand);
   color: white;
   border-radius: 20px;
-  font-size:12px;
+  font-size: 12px;
   font-weight: 700;
   padding: 10px 15px;
   transition: 300ms ease all;
 }
 
 .btn__signup--purple:hover {
-  background-color: hsl(235,calc(var(--saturation-factor, 1)*86.1%),71.8%);
+  background-color: hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 71.8%);
 }
 
 .footer__social--list {
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 .footer__social {
@@ -411,7 +434,7 @@ Device
 }
 
 .device__btn:hover {
-  box-shadow: 0 8px 15px rgba(0,0,0,.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   background-color: #36393f;
 }
 
@@ -465,7 +488,6 @@ Linux button
   color: var(--brand);
 }
 
-
 /* 
 
 Feeling Experimental?
@@ -509,7 +531,7 @@ Feeling Experimental?
   padding: 16px;
   border-radius: 16px;
   margin-top: 8px;
-  
+
   transition: 200ms ease;
 }
 
@@ -532,7 +554,6 @@ Feeling Experimental?
   color: var(--brand);
 }
 
-
 /* 
 
 All Devices wrapper
@@ -548,12 +569,12 @@ All Devices wrapper
 
 /* ios */
 .device__grid-1 {
-  grid-row: 1 / span 2;  
+  grid-row: 1 / span 2;
 }
 
 /* android */
 .device__grid-2 {
-  grid-column-start: 2 ;
+  grid-column-start: 2;
   grid-row: 2 / span 2;
 }
 
@@ -561,7 +582,6 @@ All Devices wrapper
 .device__grid-3 {
   grid-column-start: 2;
   grid-row: 4 / span 2;
-  
 }
 
 /* linux */
@@ -575,8 +595,6 @@ All Devices wrapper
   grid-column-start: 1;
   grid-row-start: 5 / span 2;
 }
-
-
 
 @media (max-width: 768px) {
   .InfoGeneral--wrapper {
