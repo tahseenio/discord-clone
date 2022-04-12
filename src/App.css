@@ -64,17 +64,18 @@ NAV
 
 .nav-logo {
   height: 30px;
+  width: 110px;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   height: 80px;
   max-width: 1400px;
   width: 100%;
+  padding: 0 40px;
   margin: 0 auto;
-  padding: 0 8px;
 }
 
 .nav__link {
@@ -91,6 +92,18 @@ nav {
   text-decoration: underline;
 }
 
+.nav__right--wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.modal-btn {
+  display: none;
+  color: white;
+  font-size: 30px;
+}
+
 .btn--login {
   color: var(--not-black);
   background-color: white;
@@ -104,6 +117,30 @@ nav {
 .btn--login:hover {
   color: var(--brand);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+
+MODAL
+
+*/
+
+.modal {
+  position: absolute;
+  width: 330px;
+  min-height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+.close-btn {
+  position: absolute;
+  font-size: 32px;
+  right: 40px;
+  top: 25px;
 }
 
 /* 
@@ -146,14 +183,16 @@ Download section
   color: white;
   font-size: 56px;
   z-index: 1;
+  text-align: center;
 }
 
 .download__para {
   color: white;
   max-width: 630px;
   text-align: center;
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
   z-index: 1;
+  margin: 0 16px 32px 16px;
 }
 
 .btn__generic {
@@ -385,6 +424,7 @@ Footer
 
 .footer__social--list {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .footer__social {
@@ -502,7 +542,7 @@ Feeling Experimental?
   background-color: var(--off-white);
   padding: 56px;
   overflow: hidden;
-  height: 300px;
+  min-height: 300px;
   width: 100%;
 }
 
@@ -596,7 +636,21 @@ All Devices wrapper
   grid-row-start: 5 / span 2;
 }
 
+@media (max-width: 1065px) {
+  .devices__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 768px) {
+  .nav__links {
+    display: none;
+  }
+  .modal-btn {
+    display: block;
+  }
+
   .InfoGeneral--wrapper {
     flex-direction: column;
     gap: 8px;
@@ -619,5 +673,28 @@ All Devices wrapper
 
   .footer__list-title {
     margin-top: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .device--wrapper {
+    height: 500px;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer__upper {
+    flex-direction: column;
+  }
+
+  .btn--wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .device--wrapper {
+    height: 400px;
   }
 }

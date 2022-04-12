@@ -16,10 +16,10 @@ export default function Footer() {
                 <option name="" id="">English, USA</option>
               </select>
               <div className="footer__social--list">
-                <a className='footer__social' href=""><BsTwitter /></a>
-                <a className='footer__social' href=""><BsInstagram /></a>
-                <a className='footer__social' href=""><BsFacebook /></a>
-                <a className='footer__social' href=""><BsYoutube /></a>
+                <a className='footer__social no-cursor' href=""><BsTwitter /></a>
+                <a className='footer__social no-cursor' href=""><BsInstagram /></a>
+                <a className='footer__social no-cursor' href=""><BsFacebook /></a>
+                <a className='footer__social no-cursor' href=""><BsYoutube /></a>
               </div>
             </div>
             <div className="footer__right-side">
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
           <div className="footer__lower">
             <Link to='discord-clone'>
-                <img className='footer-logo' src={Logo} alt="" />
+              <img className='footer-logo' src={Logo} alt="" />
             </Link>
             <a className="btn__signup--purple no-cursor" href="#">Sign up</a>
           </div>

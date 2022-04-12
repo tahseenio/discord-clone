@@ -1,7 +1,7 @@
 import React from 'react'
 import { VscChevronDown } from "react-icons/vsc";
 
-export default function Experimental( {grid} ) {
+export default function Experimental({ grid }) {
   function ToggleExperimentalDropdown() {
     const experimental = document.querySelector('.experimental-dropdown__list')
     experimental.classList.toggle('active')
@@ -15,10 +15,10 @@ export default function Experimental( {grid} ) {
         <div className="experimental-dropdown">
           <button href="" className="device__btn btn--with-arrow" onClick={() => ToggleExperimentalDropdown()}>Download Public Test Build<VscChevronDown /></button>
           <div className='experimental-dropdown__list'>
-            <a className='experimental__link' href="" onClick={() => ToggleExperimentalDropdown()}>Windows</a>
-            <a className='experimental__link' href="" onClick={() => ToggleExperimentalDropdown()}>Linux deb</a>
-            <a className='experimental__link' href="" onClick={() => ToggleExperimentalDropdown()}>Linux tar.gz</a>
-            <a className='experimental__link' href="" onClick={() => ToggleExperimentalDropdown()}>Mac</a>
+            <a className='experimental__link no-cursor' href="/" onClick={() => ToggleExperimentalDropdown()}>Windows</a>
+            <a className='experimental__link no-cursor' href="/" onClick={() => ToggleExperimentalDropdown()}>Linux deb</a>
+            <a className='experimental__link no-cursor' href="/" onClick={() => ToggleExperimentalDropdown()}>Linux tar.gz</a>
+            <a className='experimental__link no-cursor' href="/" onClick={() => ToggleExperimentalDropdown()}>Mac</a>
           </div>
         </div>
       </div>
