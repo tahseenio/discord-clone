@@ -1,8 +1,9 @@
-# <img width="30px" src="https://img.icons8.com/color/48/000000/discord-logo.png"/> Discord Clone (Work In Progress)
+# <img width="30px" src="https://img.icons8.com/color/48/000000/discord-logo.png"/> Discord Clone
 
 <img src="https://img.shields.io/github/deployments/tahseenio/discord-clone/github-pages" alt="GitHub Badge"> <img src="https://img.shields.io/github/repo-size/tahseenio/discord-clone">
 
 ### Description
+
 - A Discord Clone created using HTML, CSS, JS and React (Note: only some pages have been cloned)
 - CSS Flexbox, Grid and BEM convention used
 - Responsive on all devices
