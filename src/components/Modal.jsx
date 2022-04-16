@@ -1,14 +1,38 @@
 import React from 'react'
 import { GrClose } from "react-icons/gr";
-import { Link } from 'react-router-dom'
+import { BsDownload } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+
+import logo from '../assets/discord-logo.svg'
+import ModalLink from './ui/ModalLink';
+
+
 
 export default function Modal({ toggleModal }) {
   return (
     <section className='modal'>
-      <GrClose className='close-btn' onClick={toggleModal} />
-      <h1>
-        Not completed yet...
-      </h1>
+      <div className='modal__upper--wrapper'>
+        <GrClose className='close-btn' onClick={toggleModal} />
+        <img src={logo} className='modal-logo' alt="" />
+      </div>
+      <div className='border'></div>
+      <ul className='modal__list'>
+        <Link to={'/discord-clone'}>
+          <ModalLink {...{ toggleModal }} name={'Home'} />
+        </Link>
+        <Link to={'/discord-clone/download'}>
+          <ModalLink {...{ toggleModal }} name={'Download'} />
+        </Link>
+        <ModalLink {...{ toggleModal }} cursor={true} name={'Nitro'} />
+        <ModalLink {...{ toggleModal }} cursor={true} name={'Safety'} />
+        <ModalLink {...{ toggleModal }} cursor={true} name={'Mod Academy'} />
+        <ModalLink {...{ toggleModal }} cursor={true} name={'Support'} />
+        <ModalLink {...{ toggleModal }} cursor={true} name={'Blog'} />
+        <ModalLink {...{ toggleModal }} cursor={true} name={'Careers'} />
+      </ul>
+      <a href="" className="btn__generic btn--download btn--purple no-cursor btn-modal">
+        <BsDownload /> <span className="download__btn-title">Download for Windows</span>
+      </a>
     </section>
   )
 }

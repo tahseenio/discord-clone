@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import Modal from './Modal';
 
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
+
 export default function Nav() {
   const [modal, setModal] = useState(false)
 
   function toggleModal() {
     setModal(!modal)
   }
+
+  modal ? disableBodyScroll(document) : enableBodyScroll(document)
 
   return (
     <nav>
