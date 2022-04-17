@@ -95,13 +95,13 @@ nav {
 .nav__right--wrapper {
   display: flex;
   align-items: center;
-  gap: 16px;
 }
 
 .modal-btn {
   display: none;
   color: white;
   font-size: 30px;
+  margin-left: 16px;
 }
 
 .btn--login {
@@ -752,12 +752,19 @@ All Devices wrapper
 
   .btn--wrapper {
     flex-direction: column;
-    gap: 16px;
+  }
+
+  .btn--wrapper .btn--download {
+    margin-bottom: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .device--wrapper {
     height: 400px;
+  }
+
+  .btn__signup--purple {
+    font-size: 10px;
   }
 }
