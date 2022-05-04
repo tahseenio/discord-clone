@@ -17,7 +17,7 @@ export default function Devices() {
           <Device name={'Android'} img={Android} grid={"device__grid-2"}/>
           <Device name={'Mac'} img={Mac} grid={"device__grid-3"}/>
           <Device name={'Linux'} img={Linux} grid={"device__grid-4"}/>
-          <Experimental className="device__grid-5" grid={"device__grid-5"}/>
+          <Experimental grid={"device__grid-5"}/>
           <img src="" alt="" />
         </div>
       </div>

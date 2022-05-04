@@ -14,12 +14,12 @@ export default function Nav() {
     setModal(!modal)
   }
 
-  modal ? disableBodyScroll(document) : enableBodyScroll(document)
+  modal ? disableBodyScroll(document.body) : enableBodyScroll(document.body)
 
   return (
     <nav>
       <Link to="/discord-clone">
-        <a href="#">
+        <a href="/#">
           <img className='nav-logo' src={Logo} alt="" />
         </a>
       </Link>
@@ -44,8 +44,8 @@ export default function Nav() {
         </Link>
       </ul>
       <div className="nav__right--wrapper">
-        <a className="btn--login no-cursor" href="#">Login</a>
-        <a href="#" onClick={toggleModal}><GiHamburgerMenu className='modal-btn' /></a>
+        <a className="btn--login no-cursor" href="/#">Login</a>
+        <a href="/#" onClick={toggleModal}><GiHamburgerMenu className='modal-btn' /></a>
       </div>
       {modal && <Modal {...{ toggleModal }} />}
     </nav>

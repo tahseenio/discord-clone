@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/discord-logo.svg'
 import ModalLink from './ui/ModalLink';
 
+interface Props {
+  toggleModal: () => void;
+}
 
-
-export default function Modal({ toggleModal }) {
+export default function Modal({ toggleModal }: Props) {
   return (
     <section className='modal'>
       <div className='modal__upper--wrapper'>
@@ -30,7 +32,7 @@ export default function Modal({ toggleModal }) {
         <ModalLink {...{ toggleModal }} cursor={true} name={'Blog'} />
         <ModalLink {...{ toggleModal }} cursor={true} name={'Careers'} />
       </ul>
-      <a href="" className="btn__generic btn--download btn--purple no-cursor btn-modal">
+      <a href="/#" className="btn__generic btn--download btn--purple no-cursor btn-modal">
         <BsDownload /> <span className="download__btn-title">Download for Windows</span>
       </a>
     </section>

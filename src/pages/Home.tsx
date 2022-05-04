@@ -25,7 +25,7 @@ export default function Home() {
         para={`Grab a seat in a voice channel when you're free. Friends in your server can see you're around and instantly pop in to talk without having to call.`}
         image={hangingOut}
         bgColor={'#f6f6f6'}
-        row={'row'}
+        // row={'row'}
       />
       <InfoGeneral
         identifier={'coach'}
@@ -33,7 +33,7 @@ export default function Home() {
         para={'Get any community running with moderation tools and custom member access. Give members special powers, set up private channels, and more.'}
         image={coach}
         bgColor={'white'}
-        row={'row-reverse'}
+        // row={'row-reverse'}
       />
       <ReliableTech />
     </>

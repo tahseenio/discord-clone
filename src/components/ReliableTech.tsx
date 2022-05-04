@@ -18,7 +18,7 @@ export default function ReliableTech() {
             <img src={justChillin} alt="" />
           </figure>
           <h2 className='reliable-tech__sub-title'>Ready to start your journey?</h2>
-          <a href="" className="btn__generic btn--download btn--purple no-cursor">
+          <a href="/#" className="btn__generic btn--download btn--purple no-cursor">
             <BsDownload /> <span className="download__btn-title">Download for Windows</span>
           </a>
         </div>

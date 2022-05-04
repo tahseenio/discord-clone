@@ -1,6 +1,14 @@
 import React from 'react'
 
-export default function InfoGeneral({ title, para, image, bgColor, identifier }) {
+interface Props {
+  title: string;
+  para: string;
+  image: string;
+  bgColor: string;
+  identifier: string;
+}
+
+export default function InfoGeneral({ title, para, image, bgColor, identifier }: Props) {
   return (
       <div className="container" style={{backgroundColor: bgColor}}>
         <div className='row'>
