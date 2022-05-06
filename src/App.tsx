@@ -5,19 +5,17 @@ import Nav from './components/Nav';
 import DownloadPage from './pages/DownloadPage';
 import Home from './pages/Home';
 
-
 export default function App() {
   return (
     <Router>
       <div className='App'>
         <Nav />
         <Routes>
-          <Route path='/discord-clone' element={<Home />}></Route>
-          <Route path='/discord-clone/download' element={<DownloadPage />}></Route>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/download' element={<DownloadPage />}></Route>
         </Routes>
         <Footer />
       </div>
     </Router>
   );
 }
-
