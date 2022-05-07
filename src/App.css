@@ -568,11 +568,23 @@ Linux button
   padding: 16px;
   border-radius: 16px;
   margin-top: 8px;
-  transition: 200ms ease;
+  transition: 500ms ease;
+  animation: fade-in 300ms ease-in-out;
 }
 
 .linux-dropdown__list.active {
   display: flex;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 .linux__link {
@@ -633,8 +645,8 @@ Feeling Experimental?
   padding: 16px;
   border-radius: 16px;
   margin-top: 8px;
-
   transition: 200ms ease;
+  animation: fade-in 300ms ease-in-out;
 }
 
 .experimental-dropdown__list.active {
