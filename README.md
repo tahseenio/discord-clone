@@ -19,9 +19,7 @@
 
 `https://github.com/tahseenio/discord-clone.git`
 
-##### 2. Run using the VSCode Live Server extension or similar
-
-Can be found [here](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+##### 2. Run using npm run start
 
 ## Contribution
 
