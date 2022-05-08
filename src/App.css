@@ -27,6 +27,7 @@
 
 .App {
   background-color: #404eed;
+  overflow: hidden;
 }
 
 img {
