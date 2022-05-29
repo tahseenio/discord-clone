@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { VscChevronDown } from 'react-icons/vsc';
 
 interface Props {
@@ -9,6 +9,24 @@ interface Props {
 
 export default function Device({ name, img, grid }: Props) {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const clickHandler = () => {
+      if (!isModalOpen) return;
+      setIsModalOpen(false);
+    };
+    document.addEventListener('click', clickHandler);
+    return () => document.removeEventListener('click', clickHandler);
+  });
+
+  useEffect(() => {
+    const keyHandler = ({ keyCode }: any) => {
+      if (!isModalOpen || keyCode !== 27) return;
+      setIsModalOpen(false);
+    };
+    document.addEventListener('keydown', keyHandler);
+    return () => document.removeEventListener('keydown', keyHandler);
+  });
 
   return (
     <div className={grid}>
