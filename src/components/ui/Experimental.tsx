@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { VscChevronDown } from 'react-icons/vsc';
 
 interface Props {
@@ -17,9 +17,11 @@ export default function Experimental({ grid }: Props) {
     setIsModalOpen((state) => !state);
   };
 
+  const dropdown = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const clickHandler = () => {
-      if (!isModalOpen) return;
+    const clickHandler = ({ target }: any) => {
+      if (!isModalOpen || dropdown.current?.contains(target)) return;
       setIsModalOpen(false);
     };
     document.addEventListener('click', clickHandler);
@@ -42,7 +44,7 @@ export default function Experimental({ grid }: Props) {
         <p className='experimental__para'>
           Try our Public Test Build and test new features before they launch.
         </p>
-        <div className='experimental-dropdown'>
+        <div className='experimental-dropdown' ref={dropdown}>
           <button
             className='device__btn btn--with-arrow'
             onClick={(e) => handleClick(e)}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { VscChevronDown } from 'react-icons/vsc';
 
 interface Props {
@@ -10,9 +10,11 @@ interface Props {
 export default function Device({ name, img, grid }: Props) {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
+  const dropdown = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const clickHandler = () => {
-      if (!isModalOpen) return;
+    const clickHandler = ({ target }: any) => {
+      if (!isModalOpen || dropdown.current?.contains(target)) return;
       setIsModalOpen(false);
     };
     document.addEventListener('click', clickHandler);
@@ -38,7 +40,7 @@ export default function Device({ name, img, grid }: Props) {
           </a>
         ) : (
           <>
-            <div className={`linux-dropdown `}>
+            <div className={`linux-dropdown `} ref={dropdown}>
               <button
                 className='device__btn btn--with-arrow'
                 onClick={() => setIsModalOpen((state) => !state)}
